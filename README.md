@@ -45,3 +45,6 @@ Using 3307 instead of 3306
     networks:
       - mysql8
 ```
+
+# Presentation:
+https://docs.google.com/presentation/d/1W1-6hCa3MnSfzUeRH0CMBY5RRWqJa9Vg/
