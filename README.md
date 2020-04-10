@@ -7,7 +7,7 @@ Install docker https://www.docker.com/
 $> sh 0_restart.sh
 
 # MySql credentials
-User: Admin
+User: admin
 
 Password: p1234 
 
