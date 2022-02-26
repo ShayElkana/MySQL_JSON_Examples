@@ -46,5 +46,21 @@ Using 3307 instead of 3306
       - mysql8
 ```
 
+Using Mac with "Apple M1" chip
+```$xslt
+  mysql:
+    image: mysql:latest
+    volumes:
+      - ./configurations/mysql_configs:/etc/mysql/conf.d
+      # Create admin user and grand all privileges
+      - ./configurations/mySQL_Init_Scripts:/docker-entrypoint-initdb.d
+    environment:
+      MYSQL_ROOT_PASSWORD: p1234
+    ports:
+      - "3306:3306"
+    networks:
+      - mysql8
+```
+
 # Presentation:
 https://docs.google.com/presentation/d/1nvk3BMlzhpuqyNE8b7-DmateeSm7DKXS/edit?usp=sharing&ouid=109714630811396592523&rtpof=true&sd=true
