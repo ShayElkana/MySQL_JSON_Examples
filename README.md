@@ -49,6 +49,7 @@ Using 3307 instead of 3306
 Using Mac with "Apple M1" chip
 ```$xslt
   mysql:
+    platform: linux/x86_64
     image: mysql:latest
     volumes:
       - ./configurations/mysql_configs:/etc/mysql/conf.d
