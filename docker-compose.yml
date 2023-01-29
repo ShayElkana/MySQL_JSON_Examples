@@ -1,6 +1,7 @@
 version: '3.3'
 services:
   mysql:
+    platform: linux/x86_64
     image: mysql:latest
     volumes:
       - ./configurations/mysql_configs:/etc/mysql/conf.d
@@ -9,7 +10,19 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: p1234
     ports:
-      - "3306:3306"
+      - "3307:3306"
+    networks:
+      - mysql8
+
+  postgres:
+    platform: linux/x86_64
+    image: postgres:latest
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=p1234
+      - POSTGRES_DB=json_mysql_example
+    ports:
+      - "3308:5432"
     networks:
       - mysql8
 
